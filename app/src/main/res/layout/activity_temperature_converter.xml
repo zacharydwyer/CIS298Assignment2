@@ -144,7 +144,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/convert_result_text_view"
+            android:text="@string/convert_result_text_view_default_text"
             android:id="@+id/convert_result_text_view"
             android:layout_gravity="center_horizontal"
             android:padding="24dp"/>
