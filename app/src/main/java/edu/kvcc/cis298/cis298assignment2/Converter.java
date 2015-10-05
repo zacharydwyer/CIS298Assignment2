@@ -1,8 +1,6 @@
 package edu.kvcc.cis298.cis298assignment2;
 
-/**
- * Created by Zak Dwyer on 10/5/2015.
- */
+// A class used to convert a temperature from one type to another
 public class Converter {
 
     public static double convert(double temperature, TempType fromType,
@@ -81,6 +79,31 @@ public class Converter {
 
         return result;
 
+    }
+
+    public static String getTemperatureSuffix(TempType tempType) {
+
+        // The degree symbol
+        String suffix = "\u00b0";
+
+        // Concatenate a degree character depending on the temptype given
+        switch(tempType) {
+            case CELSIUS:
+                suffix = suffix.concat("C");
+                break;
+            case FAHRENHEIT:
+                suffix = suffix.concat("F");
+                break;
+            case KELVIN:
+                suffix = suffix.concat("K");
+                break;
+            case RANKIN:
+                suffix = suffix.concat("R");
+                break;
+        }
+
+        // Return the suffix
+        return suffix;
     }
 
     // Temperature types

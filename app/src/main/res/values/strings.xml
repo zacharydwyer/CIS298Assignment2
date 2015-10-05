@@ -9,7 +9,9 @@
     <string name="kelvin_radio_button">Kelvin</string>
     <string name="rankin_radio_button">Rankin</string>
     <string name="convert_button">CONVERT</string>
-    <string name="convert_result_text_view">Waiting for conversion...</string>
+    <string name="convert_result_text_view_default_text">Waiting for conversion...</string>
+
+    <string name="toast_error">Enter a value first.</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
