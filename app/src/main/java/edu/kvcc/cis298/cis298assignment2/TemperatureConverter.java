@@ -3,6 +3,7 @@ package edu.kvcc.cis298.cis298assignment2;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -52,18 +53,21 @@ public class TemperatureConverter extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // Get the number in the edittext field. It will definitely be a number, or be empty, since the inputType property is "number"
-                Double valueInEditText = Double.parseDouble(convertEditText.getText().toString());
+                // Holds the number from the edittext field. It will definitely be a number, or be empty, since the inputType property is "number"
+                Double valueInEditText;
 
                 // Is convertEditText empty?
-                if (valueInEditText.toString().trim().equals("")) {
+                if (TextUtils.isEmpty(convertEditText.getText().toString().trim())) {
 
                     // Show error
-                    Toast.makeText(TemperatureConverter.this, R.string.toast_error, Toast.LENGTH_SHORT).show();
+                    convertEditText.setError("Enter a value to be converted.");
 
                     // Reset the convertResultTextView to its default text
                     convertResultTextView.setText(R.string.convert_result_text_view_default_text);
                 } else {
+
+                    // Get the number
+                    valueInEditText = Double.parseDouble(convertEditText.getText().toString());
 
                     // There is a value in edittext. Set the from and to types by looking at the selected radio buttons.
                     getFromAndToTypes();
