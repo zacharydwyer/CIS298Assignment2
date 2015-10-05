@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">CIS298Assignment2</string>
 
+    <string name="convert_text_view">Convert:</string>
+    <string name="from_text_view">From</string>
+    <string name="to_text_view">To</string>
+    <string name="celsius_radio_button">Celsius</string>
+    <string name="fahrenheit_radio_button">Fahrenheit</string>
+    <string name="kelvin_radio_button">Kelvin</string>
+    <string name="rankin_radio_button">Rankin</string>
+    <string name="convert_button">CONVERT</string>
+    <string name="convert_result_text_view">Waiting for conversion...</string>
+
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 </resources>
